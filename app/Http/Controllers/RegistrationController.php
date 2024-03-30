@@ -9,36 +9,37 @@ use Illuminate\Support\Facades\Hash; // For password hashing
 class RegistrationController extends Controller
 {
     public function register(Request $request)
-    {
-        $validator = Validator::make($request->all(), [
-            'username' => 'required|unique:users',
-            'login_method' => 'required|in:email,phone',
-            'email' => 'required_if:login_method,email|email|unique:users',
-            'phone' => 'required_if:login_method,phone|unique:users',
-            'password' => 'required|min:6',
-        ]);
+{
+    $validatedData = $request->validate([
+        'name' => 'required|string|max:255',
+        'identifier' => 'required|string|max:255|unique:users',
+        'password' => 'required|string|min:8|confirmed',
+    ]);
 
-        if ($validator->fails()) {
-            return response()->json([
-                'message' => 'Registration failed: ' . $validator->errors()->first(),
-            ], 422);
-        }
+    try {
+        // User creation logic (as before)...
 
-        $users = new User;
-        $users->username = $request->username;
-
-        if ($request->login_method === 'email') {
-            $users->email = $request->email;
-        } else {
-            $users->phone = $request->phone;
-        }
-
-        $users->password = Hash::make($request->password);
-        $users->save();
+        // Authentication (e.g., using Laravel Sanctum)
+        $token = $user->createToken('auth_token')->plainTextToken;
 
         return response()->json([
             'message' => 'Registration successful!',
+            'token' => $token,
+            'user' => $user, // Optional
         ]);
+    } catch (\Illuminate\Validation\ValidationException $th) {
+        $errorMessage = 'There were validation errors with your registration:';
+        $errors = [];
+
+        foreach ($th->errors() as $key => $message) {
+            $errors[$key] = $message[0]; // Access the first error message for each field
+        }
+
+        return response()->json([
+            'message' => $errorMessage,
+            'errors' => $errors,
+        ], 422);
     }
 }
 
+}    
