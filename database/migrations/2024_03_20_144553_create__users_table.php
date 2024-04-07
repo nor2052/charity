@@ -15,7 +15,7 @@ return new class extends Migration
         Schema::create('_users', function (Blueprint $table) {
             $table->id('user_ID');
             $table->unsignedBigInteger('center_ID');
-            $table->foreign('center_ID')->references('center_ID')->on('center')->cascadeOnDelete()->cascadeOnUpdate();
+            $table->foreign('center_ID')->references('center_ID')->on('centers')->cascadeOnDelete()->cascadeOnUpdate();
             $table->string('username')->unique();
             $table->string('email')->unique()->nullable(); // Optional, if you decide to use email for login
             $table->string('password');

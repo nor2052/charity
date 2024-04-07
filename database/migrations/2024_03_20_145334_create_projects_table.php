@@ -21,6 +21,7 @@ return new class extends Migration
             $table->integer('visit',11);   
             $table->binary('image');   
             $table->integer('target',11); 
+            $table->boolean('check_finished');
             $table->timestamps();  
         });
     }

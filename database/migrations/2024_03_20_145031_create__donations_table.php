@@ -14,11 +14,11 @@ return new class extends Migration
         Schema::create('_donation', function (Blueprint $table) {
             $table->id('donation_ID');
             $table->unsignedBigInteger('project_ID');
-            $table->foreign('project_ID')->references('project_ID')->on('project')->cascadeOnDelete()->cascadeOnUpdate();
+            $table->foreign('project_ID')->references('project_ID')->on('projects')->cascadeOnDelete()->cascadeOnUpdate();
             $table->integer('amount');
             // $table->boolean('check_on');
             $table->unsignedBigInteger('operation_ID');
-            $table->foreign('operation_ID')->references('operation_ID')->on('operation')->cascadeOnDelete()->cascadeOnUpdate();
+            $table->foreign('operation_ID')->references('operation_ID')->on('operations')->cascadeOnDelete()->cascadeOnUpdate();
             $table->timestamps('date');
             $table->timestamps();
         });

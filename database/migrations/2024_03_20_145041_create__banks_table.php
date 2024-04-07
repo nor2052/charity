@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id('bank_ID');
             $table->string('name');
             $table->unsignedBigInteger('donation_ID');
-            $table->foreign('donation_ID')->references('donation_ID')->on('donation')->cascadeOnDelete()->cascadeOnUpdate();
+            $table->foreign('donation_ID')->references('donation_ID')->on('donations')->cascadeOnDelete()->cascadeOnUpdate();
             $table->timestamps();
         });
     }

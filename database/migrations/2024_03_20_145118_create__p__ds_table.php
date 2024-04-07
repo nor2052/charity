@@ -14,9 +14,9 @@ return new class extends Migration
         Schema::create('_p__d', function (Blueprint $table) {
             $table->id('p_d_ID');
             $table->unsignedBigInteger('premission_ID');
-            $table->foreignId('premission_ID')->references('premission_ID')->on('premission')->cascadeOnDelete()->cascadeOnUpdate();
+            $table->foreignId('premission_ID')->references('premission_ID')->on('premissions')->cascadeOnDelete()->cascadeOnUpdate();
             $table->unsignedBigInteger('role_ID');
-            $table->foreignId('role_ID')->references('role_ID')->on('role')->cascadeOnDelete()->cascadeOnUpdate();
+            $table->foreignId('role_ID')->references('role_ID')->on('roles')->cascadeOnDelete()->cascadeOnUpdate();
             $table->timestamps();
         });
     }
