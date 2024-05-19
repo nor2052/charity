@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Gulzar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gulzar&family=Lemonada:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400..700&display=swap');
+.custom-font {
+  font-family: 'Arial', sans-serif;
+}
+
+.custom-title {
+  font-family: 'Times New Roman', serif;
+  font-weight: bold;
+}
+.App {
+  text-align: center;
+}
+.quran {
+  padding-top: 20px;
+  font-family: 'Gulzar', serif;
+  color: #4FA095;
+  font-size: 30px;
+  justify-content: space-between;
+}
+.QuranNewLine {
+  padding-top: 1000px;
+}
+.logo {
+  height: 120px;
+  float: right;
+  padding-left: 250px;
+  padding-bottom: 60px;
+}
+.AppTitle {
+  color: #4FA095; /* لون النص */
+  font-family: "Gulzar", serif;
+  font-weight: 400;
+  font-style: normal;
+  float: right;
+}
+.ScrollingDropdown {
+  text-align: right; /* جعل النص يظهر على اليمين */
+  direction: rtl;
+}
+.AppTitle:hover {
+  color: brown;
+}
+.navb {
+  font-size: 17px;
+}
+.greenItem {
+  padding-left: 40px;
+  padding-bottom: 20px;
+  color: #479288;
+  font-size: 20px;
+  font-weight: bold;
+  white-space: nowrap; 
+}
+.cycle {
+  padding-top: -px;
+}
+.tag {
+  padding-top: 40px;
+  /* padding-bottom: 40px; */
+}
+.title2 {
+  
+  font-size: 20px; /* حجم الخط */
+  color: #333; /* لون الخط */
+  font-weight: bold; /* سمك الخط */
+  text-align: center; /* محاذاة النص */
+  margin-bottom: 20px; /* هامش أسفل العنوان للتباعد */
+
+}
+ /* .card-title {
+  padding-right: 200px;
+} 
+ .card-title p{
+  padding-top: -5000px;
+} */
+.cardMain {
+    border: 1px solid #e0e0e0; /* لون الإطار */
+    border-radius: 5px; /* تقويس الزوايا لتبدو أكثر نعومة */
+    /* display: inline-block; */
+    float: right;
+    /* padding: 20px;  */
+    /* background-color: #f9f9f9; لون الخلفية للبطاقة */
+
+}
+
+.btn {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* .col-md-8 {
+  font-size: 25px;
+} */
+
+.d-flex {
+ padding-left: 200px;
+ padding-top: 30px;
+ /* justify-content: space-between; */
+}
+
+
+
+.card .mb-3{
+  max-width: 540px;
+  display: inline-block;
+}
+
+.img-fluid .rounded-start {
+  float: left;
+}
+
+.btn-primary {
+  background-color: #198754;
+}
+.btn-primary:hover {
+  background-color: #555450;
+}
+.pdisb{
+  display: inline;
+}
+.money p{
+  justify-content: right;
+}
+.listGroup {
+  display: inline-block;
+  width: 80%;
+  padding-top:20px ;
+  justify-content: space-between;
+}
+.classEye {
+  display: block;
+  width: 40px;
+}
+.selectForm {
+  /* padding-left: -500px; */
+  /* padding-top: 20px; */
+  
+}
+
+
+.ForminArabic {
+  display: inline-block;
+  text-align: right; /* جعل النص يظهر على اليمين */
+  direction: rtl;
+  justify-content: space-between;
+}
+
+.leftToRightItem {
+  text-align: left; /* جعل النص يظهر على اليمين */
+  direction: ltr;
+}
+ .textTop {
+  justify-content: center;
+  padding-top: 20px;
+ }
+
+
+.padd {
+  padding: 15px;
+}
+
+.textwithImg {
+  color: black;
+}
+
+
+
+
+
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+  .AppTitle {
+    font-size: 30px;
+    color: #4FA095;  
+    text-align: right; 
+    float: right;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+  .AppTitle {
+    font-size: 30px;
+    color: #4FA095;  
+    text-align: right; 
+    float: right;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  /* تعديلات للشاشات التي أصغر من 600 بيكسل */
+  .img-fluid {
+    float: none; 
+  }
+  .logo{
+    display: none;
+  }
+  .AppTitle {
+    display: none;
+  }
+  .ScrollingDropdown {
+    text-align: center; 
+    direction: unset;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+  /* تعديلات للشاشات التي تتراوح بين 601 بيكسل و 900 بيكسل */
+  .img-fluid {
+    float: right; /* إعادة تحديد الصورة على اليمين */
+  }
+  .AppTitle {
+    font-size: 30px;
+    color: #4FA095;  
+    text-align: right; 
+    float: right;
+  }
+}
+
+@media screen and (min-width: 901px) {
+  /* تعديلات للشاشات التي أكبر من 900 بيكسل */
+  .img-fluid {
+    float: right; /* إعادة تحديد الصورة على اليمين */
+  }
+  .AppTitle {
+    font-size: 30px;
+    color: #4FA095;  
+    text-align: right; 
+    float: right;
+  }
+
+}
+
+/* تعديلات للشاشات الصغيرة */
+@media (min-width: 768px) {
+  .AppTitle {
+    font-size: 30px;
+    color: #4FA095;  
+    text-align: right; 
+    float: right;
+  }
+}
+
+/* تنسيق العنوان للهواتف المحمولة */
+@media (max-width: 767px) {
+  .AppTitle {
+    font-size: 30px;
+    color: #4FA095;  
+    text-align: right; 
+    float: right;
+  }
+}
